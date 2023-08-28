@@ -1,0 +1,317 @@
+/* Tableau de coresspondance "rem" -> "px"
+    Pour 100% :
+    0.25rem; //4px
+    0.5rem; //8px
+    0.75rem; //12px
+    0.875; //14px
+    1rem; //16px
+    1.0625rem //17px
+    1.125rem //18px
+    1.25rem; //20px
+    1.375rem //22px
+    1.5rem; //24px
+    2rem; //32px
+    3rem; //48px
+    4rem; //64px
+    5rem; //80px
+    */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+* {
+  font-size: 100%;
+}
+@media (min-width: 767.98px) {
+  * {
+    font-size: 100%;
+  }
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.body-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.typo-main-title {
+  color: black;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.homepage__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem;
+  gap: 1.69rem;
+  background-color: #f6f6f6;
+}
+.explore__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.explore__title {
+  text-align: center;
+  padding: 0 3.375rem;
+}
+.explore__p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1.25rem 3rem 2rem;
+  gap: 1.62rem;
+}
+
+.instruction {
+  display: flex;
+  flex-direction: column;
+  gap: 1.56rem;
+}
+.instruction__card {
+  position: relative;
+  display: flex;
+  gap: 1.44rem;
+  align-items: center;
+  padding: 1.65rem 0 1.65rem 1.5rem;
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.25rem;
+}
+.instruction__card::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  left: -0.8rem;
+  transform-origin: center;
+  background-color: #9356dc;
+}
+.instruction__card:nth-child(1)::before {
+  content: "1";
+}
+.instruction__card:nth-child(2)::before {
+  content: "2";
+}
+.instruction__card:nth-child(3)::before {
+  content: "3";
+}
+.instruction__icon {
+  color: #7e7e7e;
+}
+.instruction__icon--primary {
+  color: #9356dc;
+}
+.instruction__p {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 3rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.restaurants__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.12rem;
+  margin-bottom: 1.25rem;
+}
+
+.restaurants-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.9375rem;
+  overflow: hidden;
+}
+.restaurants-card__label {
+  position: absolute;
+  top: 0.81rem;
+  right: 0.75rem;
+  background-color: #99e2d0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 0.125rem;
+  width: 5rem;
+  height: 1.8125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #008766;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.restaurants-card__img {
+  object-fit: cover;
+  height: 8rem;
+  width: 100%;
+}
+.restaurants-card__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.56rem 0.75rem 0.84rem;
+}
+.restaurants-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.31rem;
+}
+.restaurants-card__text--title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.restaurants-card__text--p {
+  font-size: 1.0625rem;
+  font-weight: 300;
+}
+.restaurants-card__button {
+  width: 1.375rem;
+  height: 1.3125rem;
+}
+
+.toggle-heart__label {
+  cursor: pointer;
+}
+.toggle-heart__checkbox {
+  display: none;
+}
+.toggle-heart__checkbox:checked + .toggle-heart__icon {
+  background: -webkit-linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.toggle-heart__icon {
+  font-size: 1.25rem;
+  color: grey;
+  transition: color 0.3s ease-in-out;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.header__title {
+  margin: 0.875rem 0;
+  padding: 0 1.19rem 0 1rem;
+}
+
+.location {
+  height: 3.125rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.0625rem;
+  background-color: #eaeaea;
+}
+.location__text {
+  font-weight: 500;
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 1.38rem 1.56rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.125rem;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.44rem;
+}
+.footer__nav--li {
+  display: flex;
+  gap: 0.69rem;
+}
+.footer__nav--color {
+  color: white;
+}
+
+.button-primary {
+  background: linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
+  padding: 0.81rem 1.17rem;
+  border-radius: 1.5625rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: filter 0.3s ease-in-out;
+}
+.button-primary:hover {
+  filter: opacity(85%);
+}
+
+/*# sourceMappingURL=sass.css.map */
