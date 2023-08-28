@@ -17,6 +17,7 @@
     */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 * {
+  scroll-behavior: smooth;
   font-size: 100%;
 }
 @media (min-width: 767.98px) {
