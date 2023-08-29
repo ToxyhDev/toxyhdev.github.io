@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./src/css/sass.css" />
-    <link rel="stylesheet" href="./sass.css" />
+    <!-- <link rel="stylesheet" href="./sass.css" /> -->
     <script
       src="https://kit.fontawesome.com/4be32a496d.js"
       crossorigin="anonymous"
@@ -91,7 +91,9 @@
                 <div class="restaurants-card__button">
                   <label class="toggle-heart__label">
                     <input type="checkbox" class="toggle-heart__checkbox" />
-                    <i class="fa-solid fa-heart toggle-heart__icon"></i>
+
+                    <i class="fa-regular fa-heart toggle-heart__icon"></i>
+                    <i class="fa-solid fa-heart toggle-heart__icon--check"></i>
                   </label>
                 </div>
               </div>
@@ -114,7 +116,8 @@
                 <div class="restaurants-card__button">
                   <label class="toggle-heart__label">
                     <input type="checkbox" class="toggle-heart__checkbox" />
-                    <i class="fa-solid fa-heart toggle-heart__icon"></i>
+                    <i class="fa-regular fa-heart toggle-heart__icon"></i>
+                    <i class="fa-solid fa-heart toggle-heart__icon--check"></i>
                   </label>
                 </div>
               </div>
@@ -134,7 +137,8 @@
                 <div class="restaurants-card__button">
                   <label class="toggle-heart__label">
                     <input type="checkbox" class="toggle-heart__checkbox" />
-                    <i class="fa-solid fa-heart toggle-heart__icon"></i>
+                    <i class="fa-regular fa-heart toggle-heart__icon"></i>
+                    <i class="fa-solid fa-heart toggle-heart__icon--check"></i>
                   </label>
                 </div>
               </div>
@@ -157,7 +161,8 @@
                 <div class="restaurants-card__button">
                   <label class="toggle-heart__label">
                     <input type="checkbox" class="toggle-heart__checkbox" />
-                    <i class="fa-solid fa-heart toggle-heart__icon"></i>
+                    <i class="fa-regular fa-heart toggle-heart__icon"></i>
+                    <i class="fa-solid fa-heart toggle-heart__icon--check"></i>
                   </label>
                 </div>
               </div>
@@ -171,15 +176,21 @@
         <h2 class="footer__title">ohmyfood</h2>
         <ul class="footer__nav">
           <li class="footer__nav--li">
-            <i class="fa-solid fa-utensils"></i>
+            <i class="footer__nav--icon-size fa-solid fa-utensils fa-sm"></i>
             <a class="footer__nav--color" href="#">Proposer un restaurant</a>
           </li>
           <li class="footer__nav--li">
-            <i class="fa-solid fa-handshake-angle"></i>
+            <i
+              class="footer__nav--icon-size fa-solid fa-handshake-angle fa-sm"
+            ></i>
             <a class="footer__nav--color" href="#">Devenir partenaire</a>
           </li>
           <li><a class="footer__nav--color" href="#">Mentions légales</a></li>
-          <li><a class="footer__nav--color" href="#">Contact</a></li>
+          <li>
+            <a class="footer__nav--color" href="mailto: abc@example.com"
+              >Contact</a
+            >
+          </li>
         </ul>
       </footer>
     </div>
