@@ -46,7 +46,7 @@
 }
 * {
   scroll-behavior: smooth;
-  font-size: 100%;
+  font-size: 75%;
 }
 @media (min-width: 767.98px) {
   * {
