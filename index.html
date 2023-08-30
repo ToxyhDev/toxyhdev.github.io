@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./src/css/sass.css" />
-    <!-- <link rel="stylesheet" href="./sass.css" /> -->
     <script
       src="https://kit.fontawesome.com/4be32a496d.js"
       crossorigin="anonymous"
@@ -16,10 +15,10 @@
   <body>
     <div class="body-container">
       <!-- Loader -->
-      <div class="loader-container">
+      <!-- <div class="loader-container">
         <span class="loader-title">ohmyfood</span>
         <span class="loader loader-spin"></span>
-      </div>
+      </div> -->
       <!-- Main Header -->
       <header class="header">
         <nav class="header__nav">
@@ -49,9 +48,12 @@
             </p>
           </div>
 
-          <a class="button-primary" role="button" href="#restaurants"
-            >Explorer nos restaurants</a
-          >
+          <a
+            class="button-primary button-primary--p-md"
+            role="button"
+            href="#restaurants"
+            >Explorer nos restaurants
+          </a>
         </section>
 
         <!-- Main section functioning -->
@@ -77,7 +79,10 @@
         <section id="restaurants" class="restaurants">
           <h2 class="homepage__title">Restaurants</h2>
           <div class="restaurants__container">
-            <a href="#">
+            <a
+              href="./restaurants/la-palette-du-goût.html"
+              class="restaurants-container"
+            >
               <div class="restaurants-card">
                 <div class="restaurants-card__label">Nouveau</div>
                 <img
@@ -106,7 +111,7 @@
               </div>
             </a>
 
-            <a href="#">
+            <a href="#" class="restaurants-container">
               <div class="restaurants-card">
                 <div class="restaurants-card__label">Nouveau</div>
                 <img
@@ -134,7 +139,7 @@
               </div>
             </a>
 
-            <a href="#">
+            <a href="#" class="restaurants-container">
               <div class="restaurants-card">
                 <img
                   src="./src/assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
@@ -161,7 +166,7 @@
               </div>
             </a>
 
-            <a href="#">
+            <a href="#" class="restaurants-container">
               <div class="restaurants-card">
                 <img
                   src="./src/assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
@@ -198,11 +203,13 @@
         <ul class="footer__nav">
           <li class="footer__nav--li">
             <i class="footer__nav--icon-size fa-solid fa-utensils"></i>
-            <a class="footer__nav--color" href="#">Proposer un restaurant</a>
+            <a class="footer__nav--color-weight" href="#"
+              >Proposer un restaurant</a
+            >
           </li>
           <li class="footer__nav--li">
             <i class="footer__nav--icon-size fa-solid fa-handshake-angle"></i>
-            <a class="footer__nav--color" href="#">Devenir partenaire</a>
+            <a class="footer__nav--color-weight" href="#">Devenir partenaire</a>
           </li>
           <li><a class="footer__nav--color" href="#">Mentions légales</a></li>
           <li>
