@@ -17,14 +17,13 @@
     5rem; //80px
     */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-.menu-plate__checkbox:checked ~ .menu-plate__click::after, .menu-plate__click::after {
+.menu-plate__checkbox:checked ~ .menu-plate__checked::after, .menu-plate__checked::after {
   font-family: "FontAwesome";
   content: "\f058";
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.25rem;
-  color: white;
   background-color: #99e2d0;
 }
 
@@ -402,39 +401,72 @@ button {
   background-color: white;
   border-radius: 0.94rem;
   box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
-  display: flex;
+  box-sizing: border-box;
   overflow: hidden;
-  cursor: pointer;
+  position: relative;
+  width: 100%;
 }
-.menu-plate__click {
+.menu-plate__checked {
   display: flex;
   justify-content: space-between;
   width: 100%;
   background-color: white;
 }
-.menu-plate__click::after {
+.menu-plate__checked::after {
+  min-width: 0;
   width: 0;
-  transition: width 0.5s;
+  color: transparent;
+  transition: width 0.5s, color 0.5s;
 }
 .menu-plate__card {
   padding: 0.9375rem;
   display: flex;
-  justify-content: space-between;
+  gap: 1.5rem;
+  box-sizing: border-box;
   width: 100%;
+}
+.menu-plate__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 .menu-plate__checkbox {
   display: none;
 }
-.menu-plate__checkbox:checked ~ .menu-plate__click::after {
-  width: 3.6875rem;
+.menu-plate__checkbox:checked ~ .menu-plate__checked::after {
+  color: white;
+  width: 15%;
+}
+@media (min-width: 767.98px) {
+  .menu-plate__checkbox:checked ~ .menu-plate__checked::after {
+    width: 10%;
+  }
+}
+.menu-plate__text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
 }
 .menu-plate__title {
   font-size: 1.125rem;
   font-weight: 500;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-plate__description {
   font-size: 0.94019rem;
   font-weight: 300;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-plate__price {
   font-size: 0.94019rem;
