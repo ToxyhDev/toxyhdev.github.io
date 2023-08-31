@@ -140,7 +140,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background: #eaeaea;
     position: relative;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   }
@@ -152,6 +152,7 @@
     position: absolute;
     top: 0.75rem;
     right: 3rem;
+    font-size: 1rem;
 }
 
 #booki .project-title {
@@ -162,14 +163,15 @@
     font-family: 'Shrikhand', cursive;
 }
 
-#ohmyfood {
+#ohmyfood:hover {
     background: linear-gradient(175deg,
     #ff79da 0%,
     #9356dc 100%
       ) ;
 }
 
-#booki {
+
+#booki:hover {
     background: linear-gradient(175deg, rgba(222,235,255,1) 0%, rgba(0,101,252,1) 100%);
 
 
@@ -179,14 +181,13 @@
 }
 
 .main-footer {
-    background: rgb(69, 69, 70);
     width: 100%;
     box-sizing: border-box;
     padding: 1.25rem;
     color: white;
     display: flex;
     justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
 }
 
 
