@@ -274,12 +274,6 @@ button {
   }
 }
 
-@media (min-width: 1223.98px) {
-  .restaurants-container {
-    flex: 1 0 30%;
-  }
-}
-
 .restaurants-card {
   position: relative;
   display: flex;
@@ -287,6 +281,11 @@ button {
   background-color: white;
   border-radius: 0.9375rem;
   overflow: hidden;
+}
+@media (min-width: 1223.98px) {
+  .restaurants-card {
+    flex: 1 0 30%;
+  }
 }
 .restaurants-card__label {
   position: absolute;
@@ -327,6 +326,12 @@ button {
 .restaurants-card__text--p {
   font-size: 1.0625rem;
   font-weight: 300;
+}
+.restaurants-card__like {
+  position: absolute;
+  bottom: 2.06rem;
+  right: 1.56rem;
+  display: flex;
 }
 .restaurants-card__button {
   width: 1.375rem;
