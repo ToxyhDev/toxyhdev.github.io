@@ -3,6 +3,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: var(--global-size);
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 :root {
