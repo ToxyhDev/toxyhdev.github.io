@@ -55,9 +55,20 @@
     transform: rotate(360deg);
   }
 }
+@keyframes swipe-left {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 * {
   scroll-behavior: smooth;
   font-size: 75%;
+  box-sizing: border-box;
 }
 @media (min-width: 767.98px) {
   * {
@@ -124,10 +135,17 @@ button {
   font-weight: 700;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .explore {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   padding: 2.5rem 1rem;
   gap: 1.69rem;
   background-color: #f6f6f6;
@@ -154,7 +172,7 @@ button {
   padding: 3rem 1.25rem 3rem 2rem;
   gap: 1.62rem;
 }
-@media (min-width: 1023.98px) {
+@media (min-width: 1223.98px) {
   .functioning {
     padding: 3.12rem 11.25rem;
   }
@@ -165,7 +183,7 @@ button {
   flex-direction: column;
   gap: 1.56rem;
 }
-@media (min-width: 1023.98px) {
+@media (min-width: 1223.98px) {
   .instruction {
     flex-direction: row;
     justify-content: center;
@@ -183,7 +201,7 @@ button {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 1.25rem;
 }
-@media (min-width: 1023.98px) {
+@media (min-width: 1223.98px) {
   .instruction__card {
     padding: 1.79rem 2.38rem;
   }
@@ -227,12 +245,13 @@ button {
 
 .restaurants {
   background-color: #f6f6f6;
+  width: 100%;
   padding: 3rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-@media (min-width: 1023.98px) {
+@media (min-width: 1223.98px) {
   .restaurants {
     padding: 1.88rem 11.25rem;
   }
@@ -243,7 +262,7 @@ button {
   gap: 1.12rem;
   margin-bottom: 1.25rem;
 }
-@media (min-width: 1023.98px) {
+@media (min-width: 1223.98px) {
   .restaurants__container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -251,7 +270,7 @@ button {
   }
 }
 
-@media (min-width: 1023.98px) {
+@media (min-width: 1223.98px) {
   .restaurants-container {
     flex: 1 0 30%;
   }
@@ -340,6 +359,7 @@ button {
 
 .main-header {
   height: 17.1875rem;
+  width: 100%;
   display: flex;
 }
 .main-header__img {
@@ -351,12 +371,26 @@ button {
 .menu-restaurant {
   position: relative;
   background-color: #f6f6f6;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   padding: 2rem 1.06rem 2.5rem 1.06rem;
   margin-top: -2.3rem;
   border-radius: 2.5rem 2.5rem 0rem 0rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+@media (min-width: 767.98px) {
+  .menu-restaurant {
+    padding: 2rem 7rem 2.5rem 7rem;
+  }
+}
+@media (min-width: 1223.98px) {
+  .menu-restaurant {
+    width: 76.3125rem;
+    padding: 2rem 13rem 2.5rem 13rem;
+  }
 }
 
 .menu-header {
@@ -405,6 +439,8 @@ button {
   overflow: hidden;
   position: relative;
   width: 100%;
+  transform: translateX(100px);
+  opacity: 0;
 }
 .menu-plate__checked {
   display: flex;
@@ -421,7 +457,7 @@ button {
 .menu-plate__card {
   padding: 0.9375rem;
   display: flex;
-  gap: 1.5rem;
+  justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
 }
@@ -438,14 +474,10 @@ button {
 }
 .menu-plate__checkbox:checked ~ .menu-plate__checked::after {
   color: white;
-  width: 15%;
-}
-@media (min-width: 767.98px) {
-  .menu-plate__checkbox:checked ~ .menu-plate__checked::after {
-    width: 10%;
-  }
+  width: 3.6875rem;
 }
 .menu-plate__text {
+  max-width: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -473,6 +505,57 @@ button {
   font-weight: 700;
   display: flex;
   align-items: flex-end;
+}
+
+.menu-card__section:nth-of-type(1) .menu-plate:nth-of-type(1) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+.menu-card__section:nth-of-type(1) .menu-plate:nth-of-type(2) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+.menu-card__section:nth-of-type(1) .menu-plate:nth-of-type(3) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+.menu-card__section:nth-of-type(1) .menu-plate:nth-of-type(4) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+
+.menu-card__section:nth-of-type(2) .menu-plate:nth-of-type(1) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+.menu-card__section:nth-of-type(2) .menu-plate:nth-of-type(2) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+.menu-card__section:nth-of-type(2) .menu-plate:nth-of-type(3) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+.menu-card__section:nth-of-type(2) .menu-plate:nth-of-type(4) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 1.4s;
+}
+
+.menu-card__section:nth-of-type(3) .menu-plate:nth-of-type(1) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 1.4s;
+}
+.menu-card__section:nth-of-type(3) .menu-plate:nth-of-type(2) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 1.6s;
+}
+.menu-card__section:nth-of-type(3) .menu-plate:nth-of-type(3) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 1.8s;
+}
+.menu-card__section:nth-of-type(3) .menu-plate:nth-of-type(4) {
+  animation: swipe-left 1s ease-in-out forwards;
+  animation-delay: 2s;
 }
 
 .header {
@@ -530,7 +613,7 @@ button {
   flex-direction: column;
   gap: 1rem;
 }
-@media (min-width: 1023.98px) {
+@media (min-width: 1223.98px) {
   .footer {
     flex-direction: row-reverse;
     justify-content: flex-start;
@@ -547,7 +630,7 @@ button {
   flex-direction: column;
   gap: 0.44rem;
 }
-@media (min-width: 1023.98px) {
+@media (min-width: 1223.98px) {
   .footer__nav {
     flex-direction: row;
     align-items: center;
