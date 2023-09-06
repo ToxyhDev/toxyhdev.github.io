@@ -168,20 +168,28 @@
 #ohmyfood .project-title {
     font-family: 'Shrikhand', cursive;
 }
+#gameon .project-title {
+  font-family: 'Roboto', sans-serif;
+}
 
+#booki:hover {
+  background: linear-gradient(175deg, 
+  rgba(222,235,255,1) 0%, 
+  rgba(0,101,252,1) 100%);
+}
 #ohmyfood:hover {
     background: linear-gradient(175deg,
     #ff79da 0%,
-    #9356dc 100%
-      ) ;
+    #9356dc 100%);
+}
+#gameon:hover {
+  background: linear-gradient(175deg, 
+  #ff0000 0%, 
+  #232323 100%);
 }
 
 
-#booki:hover {
-    background: linear-gradient(175deg, rgba(222,235,255,1) 0%, rgba(0,101,252,1) 100%);
 
-
-}
 .project-title {
     font-size: 1.88rem;
 }
