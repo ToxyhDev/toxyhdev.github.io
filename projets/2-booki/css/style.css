@@ -77,7 +77,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.88rem 3.13rem ;
+    padding: 1.88rem 3.13rem 1.88rem 0;
     width: auto; 
     height: 100%;
     box-sizing: border-box; 
@@ -375,14 +375,20 @@ a {
 .hebergements img {
     width: 100%;
     height: 7.75rem;
+
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+
+
 
 .hebergements .card-content {
     padding: 0 0.94rem 0.94rem 0.94rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
     gap: 0.25rem;
 }
 
@@ -398,16 +404,24 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+}
+.populaires-cards {
+    flex: 1;
+    flex-direction: column;
 }
 
 .populaires-cards .card {
-    display: flex;
     min-width: 100%;
+    gap: 0.25rem;
+    height: 100%;
+    min-height: 9.125rem;
+    max-height: 9.125rem;
+    flex: 1;
 }
 
 .populaires-cards img {
     width: 33%;
-    height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -529,7 +543,7 @@ a {
 
     .populaires-cards .card {
         min-width: auto;
-        flex: 1;
+        height: auto;
     }
 
     .card-img-activites {
@@ -577,6 +591,8 @@ a {
         justify-content: center;
         border: transparent;
         padding-bottom: 0.94rem;
+        border-bottom: var(--main-bg-color) 0.125rem solid;
+
     }
 
     .nav-menu-link:hover {
@@ -641,6 +657,7 @@ a {
     .hebergements-cards {
         flex-direction: column;
     }
+
 
     .card-section-activites {
         flex-direction: column;
