@@ -171,6 +171,9 @@
 #gameon .project-title {
   font-family: 'Roboto', sans-serif;
 }
+#fisheye .project-title {
+  font-family: 'Roboto', sans-serif;
+}
 
 #booki:hover {
   background: linear-gradient(175deg, 
@@ -186,6 +189,12 @@
   background: linear-gradient(175deg, 
   #ff0000 0%, 
   #232323 100%);
+}
+
+#fisheye:hover {
+  background: linear-gradient(175deg, 
+  #d3573c 0%, 
+  #901c1c 100%);
 }
 
 

@@ -22,7 +22,7 @@ class PhotographerCard {
               <a href="${this._photographer.url}" 
                 class="user-card__link"
                 role="navigation"
-                aria-label="Link to ${this._photographer.name} page"
+                aria-label="Lien vers la page de ${this._photographer.name}"
                 >
                 <img class="user-card__picture" 
                   src="${this._photographer.portrait}" 
