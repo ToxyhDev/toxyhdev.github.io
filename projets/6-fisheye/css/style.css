@@ -44,6 +44,10 @@ a {
   color: currentColor;
 }
 
+:focus {
+  outline: 3px solid #d3573c;
+}
+
 .main-header {
   display: flex;
   flex-direction: row;
