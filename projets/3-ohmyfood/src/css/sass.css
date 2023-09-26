@@ -124,6 +124,17 @@ button {
   box-sizing: border-box;
 }
 
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .typo-main-title {
   color: black;
   font-family: "Shrikhand", sans-serif;
@@ -234,12 +245,11 @@ button {
 .instruction__card:nth-child(3)::before {
   content: "3";
 }
+.instruction__card:hover .instruction__icon {
+  color: #9356dc;
+}
 .instruction__icon {
   color: #7e7e7e;
-  font-size: 1.125rem;
-}
-.instruction__icon--primary {
-  color: #9356dc;
   font-size: 1.125rem;
 }
 .instruction__p {
@@ -284,7 +294,7 @@ button {
 }
 @media (min-width: 1223.98px) {
   .restaurants-card {
-    flex: 1 0 30%;
+    flex: 1 0 31%;
   }
 }
 .restaurants-card__label {
@@ -338,34 +348,6 @@ button {
   height: 1.3125rem;
 }
 
-.toggle-heart__label {
-  cursor: pointer;
-}
-.toggle-heart__icon {
-  font-size: 1.25rem;
-  color: black;
-}
-.toggle-heart__icon--check {
-  font-size: 1.25rem;
-}
-.toggle-heart__icon--check::before {
-  display: none;
-}
-.toggle-heart__checkbox {
-  display: none;
-}
-.toggle-heart__checkbox:checked ~ .toggle-heart__icon {
-  display: none;
-}
-.toggle-heart__checkbox:checked ~ .toggle-heart__icon--check::before {
-  display: block;
-  background-image: -webkit-linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: 0.6s ease-out heart-beat;
-}
-
 .main-header {
   height: 17.1875rem;
   width: 100%;
@@ -407,6 +389,13 @@ button {
   justify-content: space-between;
   align-items: center;
   padding-right: 1.5rem;
+}
+@media (min-width: 1223.98px) {
+  .menu-header {
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+  }
 }
 .menu-header__title {
   font-size: 1.75rem;
@@ -606,11 +595,19 @@ button {
   gap: 1.0625rem;
   background-color: #eaeaea;
 }
-.location__text {
+.location__input {
+  width: 7rem;
+  color: #353535;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 1rem;
+  border: none;
+  padding: 0;
+  background-color: transparent;
 }
 .location__icon--size {
+  color: #353535;
+  cursor: pointer;
   font-size: 1rem;
 }
 
@@ -680,6 +677,7 @@ button {
 }
 .button-primary:hover {
   filter: opacity(80%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 .button-primary--p-md {
   padding: 0.81rem 1.17rem;
@@ -735,6 +733,35 @@ button {
   border-radius: 50px;
   top: 15px;
   left: 15px;
+}
+
+.toggle-heart__label {
+  cursor: pointer;
+}
+.toggle-heart__icon {
+  font-size: 1.25rem;
+  color: black;
+  animation: 0.6s ease-out heart-beat;
+}
+.toggle-heart__icon--check {
+  font-size: 1.25rem;
+}
+.toggle-heart__icon--check::before {
+  display: none;
+}
+.toggle-heart__checkbox {
+  display: none;
+}
+.toggle-heart__checkbox:checked ~ .toggle-heart__icon {
+  display: none;
+}
+.toggle-heart__checkbox:checked ~ .toggle-heart__icon--check::before {
+  display: block;
+  background-image: -webkit-linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: 0.6s ease-out heart-beat;
 }
 
 /*# sourceMappingURL=sass.css.map */
