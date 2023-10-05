@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <link rel="stylesheet" href="./src/css/sass.css" />
+
+    <title>Les Petits Plats</title>
+  </head>
+  <body>
+    <div class="body-container d-flex flex-column w-100 h-100">
+      <header class="header">
+        <div class="header__title">
+          <img
+            src="./src/assets/logo/logo-main.svg"
+            alt="Logo des Petits Plats"
+            class="header__logo"
+          />
+        </div>
+
+        <section class="header__searchBar">
+          <h2 class="text-primary searchBar__text">
+            Cherchez parmi plus de 1500 recettes du quotidien, simples et
+            délicieuses
+          </h2>
+          <form action="#" class="searchBar__form">
+            <!-- onsubmit="return mainSearch.validate(event);" -->
+            <label for="search" class="form-label searchBar__label"></label>
+            <input
+              type="search"
+              name="search"
+              id="search"
+              class="searchBar__input"
+              placeholder="Rechercher une recette, un ingrédient, ..."
+              minlength="3"
+            />
+            <button class="searchBar__button" type="submit"></button>
+          </form>
+        </section>
+      </header>
+      <!-- Main -->
+      <main class="container mb-5">
+        <!-- Filter -->
+        <div class="section-filter py-4">
+          <div class="filters">
+            <!-- Filtre Ingrédients -->
+            <div class="filter">
+              <button
+                class="filter__button"
+                role="combobox"
+                aria-labelledby="filter-dropdown0"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="filter-dropdown0"
+              >
+                <span>Ingrédients</span>
+                <span class="filter__button--arrow"></span>
+              </button>
+              <div
+                class="filter__dropdown"
+                id="filter-dropdown0"
+                role="listbox"
+              >
+                <form class="filter__search">
+                  <label for="search-ingredients"></label>
+                  <input
+                    class="filterForm__input"
+                    type="search"
+                    name="search-ingredients"
+                    id="search-ingredients"
+                  />
+                  <span class="filterForm__btn"></span>
+                </form>
+                <ul class="filterDropdown__list"></ul>
+              </div>
+            </div>
+            <!-- Filtre Appareils -->
+            <div class="filter">
+              <button
+                class="filter__button"
+                role="combobox"
+                aria-labelledby="filter-dropdown1"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="filter-dropdown1"
+              >
+                <span>Appareils</span>
+                <span class="filter__button--arrow"></span>
+              </button>
+              <div
+                class="filter__dropdown"
+                id="filter-dropdown1"
+                role="listbox"
+              >
+                <form class="filter__search">
+                  <label for="search-appareils"></label>
+                  <input
+                    class="filterForm__input"
+                    type="search"
+                    name="search-appareils"
+                    id="search-appareils"
+                  />
+                  <span class="filterForm__btn"></span>
+                </form>
+                <ul class="filterDropdown__list"></ul>
+              </div>
+            </div>
+            <div class="filter">
+              <button
+                class="filter__button"
+                role="combobox"
+                aria-labelledby="filter-dropdown2"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="filter-dropdown2"
+              >
+                <span>Ustensiles</span>
+                <span class="filter__button--arrow"></span>
+              </button>
+              <div
+                class="filter__dropdown"
+                id="filter-dropdown2"
+                role="listbox"
+              >
+                <form class="filter__search">
+                  <label for="search-ustensiles"></label>
+                  <input
+                    class="filterForm__input"
+                    type="search"
+                    name="search-ustensiles"
+                    id="search-ustensiles"
+                  />
+                  <span class="filterForm__btn"></span>
+                </form>
+                <ul class="filterDropdown__list"></ul>
+              </div>
+            </div>
+          </div>
+          <span class="font-strong filter-result"></span>
+        </div>
+        <ul class="section-filterSelected"></ul>
+        <!-- Recipes section -->
+        <ul class="section-recipes pt-5"></ul>
+      </main>
+    </div>
+    <script src="./src/js/api/api.js"></script>
+    <script src="./src/js/utils/filters.js"></script>
+    <script src="./src/js/utils/RemoveStopWords.js"></script>
+    <script src="./src/js/utils/GroupAllData.js"></script>
+    <script src="./src/js/utils/MainSearch.js"></script>
+    <script src="./src/js/utils/ListTags.js"></script>
+    <script src="./src/js/utils/CreateRecipeCard.js"></script>
+    <script src="./src/js/utils/TagInFilters.js"></script>
+    <script src="./src/js/utils/FiltersSearch.js"></script>
+
+    <script src="./src/js/factories/RecipeTagFactory.js"></script>
+    <script src="./src/js/factories/RecipesFactory.js"></script>
+
+    <script src="./src/js/models/RecipesModelsCard.js"></script>
+    <script src="./src/js/models/RecipesModelsName.js"></script>
+    <script src="./src/js/models/RecipesModelsDesc.js"></script>
+    <script src="./src/js/models/RecipesModelsIngredients.js"></script>
+    <script src="./src/js/models/RecipesModelsAppliance.js"></script>
+    <script src="./src/js/models/RecipesModelsUstensils.js"></script>
+
+    <script src="./src/js/templates/RecipeCard.js"></script>
+    <script src="./src/js/templates/TagLabel.js"></script>
+    <script src="./src/js/templates/NumberRecipes.js"></script>
+    <script src="./src/js/templates/TagFilterElement.js"></script>
+
+    <script src="./src/js/App.js"></script>
+  </body>
+</html>

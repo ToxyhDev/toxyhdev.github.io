@@ -175,6 +175,10 @@
   font-family: 'DM Sans', sans-serif;
 }
 
+#lespetitsplats .project-title {
+  font-family: 'Anton', sans-serif
+}
+
 #booki:hover {
   background: linear-gradient(175deg, 
   rgba(222,235,255,1) 0%, 
@@ -195,6 +199,12 @@
   background: linear-gradient(175deg, 
   #d3573c 0%, 
   #901c1c 100%);
+}
+
+#lespetitsplats:hover {
+  background: linear-gradient(175deg, 
+  #ffd15b 0%, 
+  #1b1b1b 100%);
 }
 
 
