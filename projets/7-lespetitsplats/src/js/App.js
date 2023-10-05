@@ -17,7 +17,7 @@ class App {
   async main() {
     //  --> Récupération des datas
     const recipesData = await this.recipesApi.get()
-    console.log(recipesData)
+    // console.log(recipesData)
 
     //  --> Trie des données des Recipes Cards
     const recipes = new RecipesFactory(recipesData, 'recipes')

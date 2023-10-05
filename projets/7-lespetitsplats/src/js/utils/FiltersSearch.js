@@ -12,7 +12,6 @@ class FiltersSearch {
   }
 
   listenerInput() {
-    console.log(this.$inputFormFilter)
     Array.from(this.$inputFormFilter).forEach((element, index) => {
       element.addEventListener('input', (event) => {
         new TagInFilters().sortSearchAdvanced(event.target.value, index)

@@ -59,8 +59,6 @@ class TagInFilters {
       TagInFilters.dataInFilter = []
     }
     TagInFilters.dataInFilter.push(removeDouble)
-
-    console.log(TagInFilters.dataInFilter)
   }
 
   createTagInFilter(data, index) {
@@ -74,7 +72,9 @@ class TagInFilters {
       )
 
       labelElement.addEventListener('click', () => {
+        // -> Rajoute le tag cliqué à la liste des tags
         new ListTags().addToListTag(tag)
+        // -> Supprime la saisi dans l'input recherche avancé
         new FiltersSearch().deleteInput(index)
       })
     })
@@ -83,16 +83,13 @@ class TagInFilters {
   sortSearchAdvanced(value, index) {
     const addMatchRecipe = []
     const words = TagInFilters.dataInFilter[index]
-    // console.log(words)
+
     for (const word of words) {
-      // console.log(word)
       // -> search mot commencant par lettre saisi
       if (word.toLowerCase().startsWith(value.toLowerCase())) {
-        // console.log(word)
         addMatchRecipe.push(word)
       }
     }
-    console.log(addMatchRecipe)
     this.createTagInFilter(addMatchRecipe, index)
   }
 }
