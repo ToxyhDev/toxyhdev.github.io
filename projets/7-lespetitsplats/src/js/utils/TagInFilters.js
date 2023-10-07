@@ -84,12 +84,12 @@ class TagInFilters {
     const addMatchRecipe = []
     const words = TagInFilters.dataInFilter[index]
 
-    for (const word of words) {
-      // -> search mot commencant par lettre saisi
-      if (word.toLowerCase().startsWith(value.toLowerCase())) {
+    words.filter((word) => {
+      // -> search mot qui contient la lettre saisi
+      if (word.toLowerCase().includes(value.toLowerCase())) {
         addMatchRecipe.push(word)
       }
-    }
+    })
     this.createTagInFilter(addMatchRecipe, index)
   }
 }

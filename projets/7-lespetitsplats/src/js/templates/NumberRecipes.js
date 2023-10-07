@@ -5,14 +5,8 @@
 
 class NumberRecipes {
   constructor() {
-    // this._number = number
-
     this.$filterResult = document.querySelector('.filter-result')
   }
-
-  //   get number() {
-  //     return this._number
-  //   }
 
   createResult(number) {
     this.$filterResult.textContent = `${number} recettes`

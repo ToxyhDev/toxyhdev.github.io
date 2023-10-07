@@ -8,6 +8,8 @@ class FiltersSearch {
   constructor() {
     this.$inputFormFilter = document.getElementsByClassName('filterForm__input')
 
+    this.$inputRemove = document.querySelectorAll('.filterForm__remove')
+
     this._dataInput = []
   }
 
@@ -19,6 +21,17 @@ class FiltersSearch {
       element.addEventListener('submit', (event) => {
         event.preventDefault()
         event.stopPropagation()
+      })
+    })
+  }
+
+  listenerInputRemove() {
+    this.$inputRemove.forEach((element, index) => {
+      element.addEventListener('click', (event) => {
+        event.preventDefault()
+        event.stopPropagation()
+        this.deleteInput(index)
+        new TagInFilters().sortSearchAdvanced(event.target.value, index)
       })
     })
   }

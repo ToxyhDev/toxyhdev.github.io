@@ -27,7 +27,6 @@ class RecipesModelsIngredients {
 
   get ingredientsFilter() {
     const listIngredients = this._ingredients.map((element) => {
-      // console.log(element)
       return element.ingredient
     })
     return listIngredients

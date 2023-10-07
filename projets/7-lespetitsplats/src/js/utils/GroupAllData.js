@@ -8,9 +8,7 @@ class GroupAllData {
 
     this._newData = []
 
-    this._lengthTotal = 0
     this._invertedIndex = {} // Index inversé
-    this._lengthWordTotal = 0
   }
 
   groupDatas() {
@@ -28,8 +26,9 @@ class GroupAllData {
         : ''
 
       const words = [name, desc, ingredients, appliance, ustensils]
-        .filter(Boolean)
+        .filter(Boolean) //Supprime élément vide du tableau ('')
         .join(' ')
+        .toLowerCase()
 
       // En utilisant Object.hasOwnProperty.call, j'évite tout conflit
       // potentiel avec d'autres implémentations de hasOwnProperty
@@ -53,8 +52,6 @@ class GroupAllData {
         //  --> J'enlève les mots doublons
         this._newData[id] = [...new Set(this._newData[id])]
 
-        // this._lengthTotal += this._newData[id].length
-
         // ==> Création index inversé
         this._newData[id].forEach((word) => {
           //  --> Pour chaque mot je rajoute sa recette
@@ -70,18 +67,5 @@ class GroupAllData {
     }
 
     return this._invertedIndex
-
-    // const keys = Object.keys(this._invertedIndex)
-    // keys.forEach((element) => (this._lengthWordTotal += element.length))
-
-    // const invertedIndexLength = Object.keys(this._invertedIndex).length
-
-    // return {
-    // groupedData: this._newData,
-    // lengthTotal: this._lengthTotal,
-    //   invertedIndex: this._invertedIndex
-    // invertedIndexLenght: invertedIndexLength,
-    // invertedIdLenght: this._lengthWordTotal,
-    // }
   }
 }

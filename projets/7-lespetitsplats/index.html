@@ -26,7 +26,6 @@
             délicieuses
           </h2>
           <form action="#" class="searchBar__form">
-            <!-- onsubmit="return mainSearch.validate(event);" -->
             <label for="search" class="form-label searchBar__label"></label>
             <input
               type="search"
@@ -36,6 +35,7 @@
               placeholder="Rechercher une recette, un ingrédient, ..."
               minlength="3"
             />
+            <button class="searchBar__remove" type="reset"></button>
             <button class="searchBar__button" type="submit"></button>
           </form>
         </section>
@@ -71,6 +71,7 @@
                     name="search-ingredients"
                     id="search-ingredients"
                   />
+                  <button class="filterForm__remove" type="reset"></button>
                   <span class="filterForm__btn"></span>
                 </form>
                 <ul class="filterDropdown__list"></ul>
@@ -102,6 +103,7 @@
                     name="search-appareils"
                     id="search-appareils"
                   />
+                  <button class="filterForm__remove" type="reset"></button>
                   <span class="filterForm__btn"></span>
                 </form>
                 <ul class="filterDropdown__list"></ul>
@@ -132,6 +134,7 @@
                     name="search-ustensiles"
                     id="search-ustensiles"
                   />
+                  <button class="filterForm__remove" type="reset"></button>
                   <span class="filterForm__btn"></span>
                 </form>
                 <ul class="filterDropdown__list"></ul>

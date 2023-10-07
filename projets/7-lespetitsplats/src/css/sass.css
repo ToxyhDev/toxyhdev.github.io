@@ -52,6 +52,27 @@ li {
   list-style: none;
 }
 
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
 /*
 
     => Section des filtres
@@ -263,6 +284,18 @@ li {
   padding-left: 1rem;
   padding-right: 4rem;
 }
+.searchBar__remove {
+  border: none;
+  background: none;
+  position: absolute;
+  margin: 5.2rem;
+  width: 0.8125rem;
+  height: 0.8125rem;
+  background-image: url(../assets/header/delete-input.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .searchBar__button {
   border: none;
   width: 3.1875rem;
@@ -347,6 +380,18 @@ li {
   color: var(--bs-tertiary);
   font-size: 0.875rem;
   font-weight: 400;
+}
+.filterForm__remove {
+  border: none;
+  background: none;
+  position: absolute;
+  margin-right: 2.19rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  background-image: url(../assets/header/delete-advancedform.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
 }
 .filterForm__btn {
   border: none;

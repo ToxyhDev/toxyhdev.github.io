@@ -23,7 +23,6 @@ class App {
     const recipes = new RecipesFactory(recipesData, 'recipes')
     // console.log(recipes)
 
-    // const initDataRecipes = new CreateRecipeCard()
     this._initDataRecipes.initRecipesArray(recipes)
 
     //  --> Trie des données des Nom de recettes (stop word + minuscule)
@@ -38,8 +37,10 @@ class App {
     const recipesIngredients = new RecipesFactory(recipesData, 'ingredients')
     // console.log(recipesIngredients)
 
+    //  --> Trie des données des Appareils de recettes
     const recipesAppliance = new RecipesFactory(recipesData, 'appareils')
 
+    //  --> Trie des données des Ustensiles de recettes
     const recipesUstensils = new RecipesFactory(recipesData, 'ustensiles')
 
     const allSortData = [
@@ -68,12 +69,10 @@ class App {
 
     //  --> Création des card recipe et ajout au DOM
     new RecipeTagFactory([])
-    // recipes.forEach((recipe) => {
-    //   const templateCard = new RecipeCard(recipe)
-    //   this.$recipesContainer.appendChild(templateCard.createRecipeCard())
-    // })
 
-    new FiltersSearch().listenerInput()
+    const filterSearch = new FiltersSearch()
+    filterSearch.listenerInput()
+    filterSearch.listenerInputRemove()
   }
 }
 

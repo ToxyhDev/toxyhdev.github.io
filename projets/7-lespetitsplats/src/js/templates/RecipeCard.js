@@ -8,10 +8,7 @@ class RecipeCard {
   constructor(data) {
     this._recipe = data
 
-    // console.log(this._recipe)
-
     this.$wrapper = document.createElement('li')
-    // this.$wrapper.classList.add('recipe')
   }
 
   get recipes() {

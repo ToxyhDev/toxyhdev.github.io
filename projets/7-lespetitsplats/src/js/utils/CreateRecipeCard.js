@@ -97,9 +97,6 @@ class CreateRecipeCard {
       new NumberRecipes().createResult(0)
       new TagInFilters([]).runSortFilter()
     }
-
-    // console.log(resultMatchRecipes.join().length)
-    // this.searchRecipes(resultMatchRecipes)
   }
 
   searchRecipes(resultMatchRecipes) {
@@ -111,6 +108,5 @@ class CreateRecipeCard {
     })
 
     this.createRecipe(displayRecipe)
-    // console.log(displayRecipe)
   }
 }
