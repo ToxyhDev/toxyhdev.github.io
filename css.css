@@ -179,6 +179,10 @@
   font-family: 'Anton', sans-serif;
 }
 
+#kasa .project-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
 #booki:hover {
   background: linear-gradient(175deg, 
   rgba(222,235,255,1) 0%, 
@@ -205,6 +209,11 @@
   background: linear-gradient(175deg, 
   #ffd15b 0%, 
   #1b1b1b 100%);
+}
+#kasa:hover {
+  background: linear-gradient(175deg, 
+  #c4c4c4 0%, 
+  #ff6060 100%);
 }
 
 
