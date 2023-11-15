@@ -182,6 +182,9 @@
 #kasa .project-title {
   font-family: 'Montserrat', sans-serif;
 }
+#sportsee .project-title {
+  font-family: 'Roboto', sans-serif;
+}
 
 #booki:hover {
   background: linear-gradient(175deg, 
@@ -214,6 +217,11 @@
   background: linear-gradient(175deg, 
   #c4c4c4 0%, 
   #ff6060 100%);
+}
+#sportsee:hover {
+  background: linear-gradient(175deg, 
+  #ff0000 0%, 
+  #282d30 100%);
 }
 
 
